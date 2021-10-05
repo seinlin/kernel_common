@@ -27,6 +27,8 @@
 #include <trace/hooks/pm_domain.h>
 #include <trace/hooks/cpuidle_psci.h>
 #include <trace/hooks/vmscan.h>
+#include <trace/hooks/avc.h>
+#include <trace/hooks/selinux.h>
 #include <trace/hooks/syscall_check.h>
 
 /*
@@ -71,5 +73,10 @@ EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_binder_wait_for_work);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_sync_txn_recvd);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_set_balance_anon_file_reclaim);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_show_max_freq);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_selinux_avc_insert);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_selinux_avc_node_delete);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_selinux_avc_node_replace);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_selinux_avc_lookup);
+EXPORT_TRACEPOINT_SYMBOL_GPL(android_rvh_selinux_is_initialized);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_check_mmap_file);
 EXPORT_TRACEPOINT_SYMBOL_GPL(android_vh_check_bpf_syscall);
